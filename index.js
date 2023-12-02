@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const cors = require("cors");
-app.use(cors());
+app.use(cors()); 
 app.get('/getLoggedFlightHTML', async (req, res) => {
   try {
   const browser = await puppeteer.launch({ headless: true,args:['--no-sandbox']});
